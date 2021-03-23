@@ -4,15 +4,15 @@
 	const { session, page } = stores();
 
 	page.subscribe((p) => {
-		console.debug('[page.subscribe] called');
+		console.debug('[index.svelte, page.subscribe] called');
 	})
 
 	setTimeout(() => {
 		session.update((s) => {
-			console.debug('[session.update] called');
+			console.debug('[index.svelte, session.update] called');
 			return {...s}
 		})
-	})
+	}, 1000)
 </script>
 
 <style>

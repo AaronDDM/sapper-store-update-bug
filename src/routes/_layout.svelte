@@ -4,15 +4,15 @@
 	import Nav from '../components/Nav.svelte';
 
 	page.subscribe((p) => {
-		console.debug("called")
+		console.debug('[_layout.svelte, page.subscribe] called');
 	})
+
 	setTimeout(() => {
 		session.update((s) => {
-			console.debug("Ran")
-			return {...s};
-		});
-	}, 5000);
-
+			console.debug('[_layout.svelte, session.update] called');
+			return {...s}
+		})
+	}, 1000)
 
 	export let segment;
 </script>
